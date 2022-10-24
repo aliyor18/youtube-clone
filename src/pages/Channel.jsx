@@ -1,6 +1,6 @@
 import './Channel.css'
-import React from 'react'
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from "react-router-dom"
 
 import channelBg from '../assets/channel-bg.png'
 import margaret from '../assets/margaret.svg'
@@ -15,8 +15,25 @@ import radio from '../assets/radio.png'
 import watermelon from '../assets/watermelon.png'
 import monitor from '../assets/monitor.png'
 import asteroids from '../assets/asteroids.png'
+import useFetching from '../hooks/useFetching'
 
 const Channel = () => {
+
+	const {request2,loading1} = useFetching()
+	const [user,setUser] = useState({})
+
+	const {id} = useParams()
+	console.log(id);
+
+	useEffect(() => {
+		const data =  async () => {
+			const data = await request2(id)	
+			setUser(data.data)
+		}
+		data()
+	},[id])
+
+		console.log(user);
 	return (
 		<div className='channel-box'>
 			<div className='col-12 mt-2 mb-4'>
@@ -25,14 +42,17 @@ const Channel = () => {
 
 			<div className='col-12 d-flex align-items-center justify-content-between'>
 
-				<a className='d-flex text-decoration-none' href="/">
-					<img className='me-2' src={margaret} alt="avatar" />
+				<div className='d-flex text-decoration-none' href="/">
+					<img className='me-2 rounded-circle' src={user.avatar} alt="avatar" width={70} height = {70}/>
 
 					<div className='d-flex flex-column'>
-						<p className='channel_name'>Margaret Phelps</p>
+						<p className='channel_name'>
+							{user.first_name} 
+							<span className='ms-2'>{user.last_name}</span>
+						</p>
 						<p className='channel_num'>245K subscribed</p>
 					</div>
-				</a>
+				</div>
 
 				<button className='channel-bg'>
 					Subscribe 2.3m

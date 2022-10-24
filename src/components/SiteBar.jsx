@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './SiteBar.css'
 import {Link} from "react-router-dom"
 
@@ -13,16 +13,22 @@ import liked from '../assets/liked_logo.svg'
 import music from '../assets/music_logo.svg'
 import game from '../assets/games_logo.svg'
 import more from '../assets/more_logo.svg'
-import gunes from '../assets/gunes.svg'
-import nora from '../assets/nora.svg'
-import bele from '../assets/bele.svg'
-import eunice from '../assets/eunice.svg'
-import emma from '../assets/emma.svg'
-import leah from '../assets/leah.svg'
 import setting from '../assets/setting.svg'
+import useFetching from '../hooks/useFetching'
 
 
 const SiteBar = () => {
+	const {request} = useFetching()
+	const [users,setUsers] = useState([])
+
+		useEffect(() => {
+			const data =  async () => {
+				const data = await request()	
+				setUsers(data.data)
+			}
+			data()
+		},[])
+
 	return (
 		<div className='sitebar_box'>
 			<ul className='list-unstyled mb-5'>
@@ -127,55 +133,24 @@ const SiteBar = () => {
 					Subscriptions
 				</li>
 
-				<li className='mb-3'>
-					<Link className='links' to="/channel">
-						<img className='me-2' src={gunes} alt="avatar" width={26} height={26} />
-						Gussie Singleton
-					</Link>
-				</li>
-
-				<li className='mb-3'>
-				<Link className='links' to="/channel">
-						<img className='me-2' src={nora} alt="avatar" width={26} height={26} />
-						Nora Francis
-					</Link>
-				</li>
-
-				<li className='mb-3'>
-					<Link className='links' to="/channel">
-						<img className='me-2' src={bele} alt="avatar" width={26} height={26} />
-						Belle Briggs
-						</Link>
-				</li>
-
-				<li className='mb-3'>
-				<Link className='links' to="/channel">
-						<img className='me-2' src={eunice} alt="avatar" width={26} height={26} />
-						Eunice Cortez
-						</Link>
-				</li>
-
-				<li className='mb-3'>
-				<Link className='links' to="/channel">
-						<img className='me-2' src={emma} alt="avatar" width={26} height={26} />
-						Emma Hanson
-						</Link>
-				</li>
-
-				<li className='mb-5'>
-				<Link className='links' to="/channel">
-						<img className='me-2' src={leah} alt="avatar" width={26} height={26} />
-						Leah Berry
-						</Link>
-				</li>
+				{
+					users.map(el => (
+						<li key={el.id} className='mb-3'>
+							<Link className='links' to={`/channel/${el.id}`}>
+								<img className='me-2 rounded-circle' src={el.avatar} alt="avatar" width={40} height={40} />
+								{el.first_name}
+							</Link>
+						</li>
+					))
+				}
 			</ul>
 
 			<ul className='list-unstyled pt-5'>
 				<li>
-				<Link className='links' to="/channel">
-						<img className='me-2' src={setting} alt="setting" width={19} height={20} />
-						Setting
-						</Link>
+				<Link className='links' to="/channel:id">
+					<img className='me-2' src={setting} alt="setting" width={19} height={20} />
+					Setting
+					</Link>
 				</li>
 			</ul>
 		</div>

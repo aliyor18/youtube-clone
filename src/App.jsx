@@ -32,7 +32,7 @@ function App() {
             <Routes>
               <Route path='/' element = {<Home/>}/>
               <Route path='/player' element = {<Player/>}/>
-              <Route path='/channel' element = {<Channel/>}/>
+              <Route path='/channel/:id' element = {<Channel/>}/>
               <Route path='*' element = {<Navigate to= "/"/>}/>
             </Routes>
           </div></>

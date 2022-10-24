@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import './Home.css'
 import gunes from '../assets/gunes.svg'
@@ -18,8 +18,13 @@ import foods from '../assets/spageti.png'
 import limon from '../assets/limon.png'
 import baton from '../assets/baton.png'
 import watermellon from '../assets/watermellon.png'
+import useFetching from '../hooks/useFetching'
 
 const Home = () => {
+
+
+
+	
 	return (
 		<div>
 			<div>
