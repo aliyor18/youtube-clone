@@ -1,0 +1,122 @@
+.channel-bg {
+	background-color: #FF0000;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.channel-box {
+	max-width: 1150px;
+}
+
+.channel_name {
+	margin: 0;
+	padding-top:  10px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 33px;
+	color: #FFFFFF;
+}
+
+.channel_num {
+	margin: 0;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	color: #C2C2C2;
+}
+
+.channel_desc {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
+
+.channel_heading {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 34px;
+	color: #FFFFFF;
+}
+
+.channel__box {
+	width: 500px;
+}
+
+.channel__text {
+	margin: 0px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.6;
+}
+
+.channel__span {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.4;
+}
+
+.channel__links {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
+
+.chanel__title {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 33px;
+	color: #FFFFFF;
+}
+
+.channell_desc {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
+
+.channell_span {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 13px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.4;
+}

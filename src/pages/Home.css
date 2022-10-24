@@ -1,0 +1,44 @@
+.home_list {
+	align-items: center;
+}
+
+.home_desc {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+
+.home_span {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+
+	color: #FFFFFF;
+
+	mix-blend-mode: normal;
+	opacity: 0.4;
+}
+
+.home__descs {
+	margin: 0 15px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 33px;
+	color: #FFFFFF;
+}
+
+.home__spans {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #C2C2C2;
+}

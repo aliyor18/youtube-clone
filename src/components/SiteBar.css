@@ -1,0 +1,25 @@
+.links {
+	text-decoration: none;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+
+.site_title {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 25px;
+	color: #FFFFFF;
+}
+
+.sitebar_box {
+	width: 250px !important;
+}
